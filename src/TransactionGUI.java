@@ -58,16 +58,9 @@ public class TransactionGUI extends JFrame implements ActionListener {
         balanceEnquiryBtn.addActionListener(this);
         add(balanceEnquiryBtn);
 
-        pinChangeBtn = new JButton("PIN CHANGE");
-        pinChangeBtn.setBounds(880, 427, 260, 70);
-        pinChangeBtn.setForeground(Color.WHITE);
-        pinChangeBtn.setBackground(new Color(30,40,125));
-        pinChangeBtn.setFont(new Font("Arial", Font.BOLD, 18));
-        pinChangeBtn.addActionListener(this);
-        add(pinChangeBtn);
 
         exitBtn = new JButton("EXIT");
-        exitBtn.setBounds(520, 570, 260, 70);
+        exitBtn.setBounds(880, 430, 260, 70);
         exitBtn.setForeground(Color.WHITE);
         exitBtn.setBackground(new Color(30,40,125));
         exitBtn.setFont(new Font("Arial", Font.BOLD, 18));
