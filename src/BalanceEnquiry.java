@@ -3,7 +3,6 @@ import javax.swing.*;
 public class BalanceEnquiry extends JFrame {
     JLabel balanceLabel;
     JTextArea balanceArea;
-    double amount;
 
     public BalanceEnquiry() {
         setTitle("Balance Enquiry");
