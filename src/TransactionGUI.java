@@ -3,7 +3,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class TransactionGUI extends JFrame implements ActionListener {
+public class TransactionGUI extends JFrame implements ActionListener
+{
     JButton depositBtn, withdrawBtn, fastCashBtn, miniStatementBtn, balanceEnquiryBtn, pinChangeBtn, exitBtn;
 
     public TransactionGUI() {
@@ -99,6 +100,6 @@ public class TransactionGUI extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new TransactionGUI(); // Launch main menu
+       TransactionGUI transactionGUI = new TransactionGUI(); // Launch main menu
     }
 }
