@@ -1,13 +1,15 @@
+// Main Frame
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class MainFrameGUI extends JFrame implements ActionListener
 {
-    JButton transactionBtn;
+    JButton transactionbtn;
 
-    MainFrameGUI()
+    public MainFrameGUI()
     {
+        setTitle("BANK MANAGEMENT SYSTEM");
         setSize(1480, 1480);
         setLayout(null);
         setLocationRelativeTo(null);
@@ -15,32 +17,31 @@ public class MainFrameGUI extends JFrame implements ActionListener
 
         JLabel title = new JLabel("WELCOME TO BANK MANAGEMENT SYSTEM");
         title.setFont(new Font("Times New Roman", Font.BOLD, 32));
-        title.setBounds(350, 30, 800, 70);
+        title.setBounds(350, 20, 860, 70);
         add(title);
 
-        transactionBtn = new JButton("TRANSACTION");
-        transactionBtn.setBounds(550, 140, 260, 70);
-        transactionBtn.setForeground(Color.WHITE);
-        transactionBtn.setBackground(new Color(0, 0, 240));
-        transactionBtn.setFont(new Font("Arial", Font.BOLD, 20));
-        transactionBtn.addActionListener(this); // ✅ enable ActionListener
-        add(transactionBtn);
+        transactionbtn = new JButton("CASH DEPOSIT");
+        transactionbtn.setBounds(530, 140, 260, 70);
+        transactionbtn.setForeground(Color.WHITE);
+        transactionbtn.setBackground(new Color(30,40,125));
+        transactionbtn.setFont(new Font("Arial", Font.BOLD, 18));
+        transactionbtn.addActionListener(this);
+        add(transactionbtn);
 
         setVisible(true);
     }
 
-
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        if (e.getSource() == transactionBtn)
+        if (e.getSource() == transactionbtn)
         {
-            new TransactionGUI(); // make sure TransactionGUI exists
+             new TransactionGUI();
         }
     }
 
-    public static void main(String args[])
+    public static void main(String[] args)
     {
-        new MainFrameGUI();
+        MainFrameGUI mfGUI = new MainFrameGUI();
     }
 }
